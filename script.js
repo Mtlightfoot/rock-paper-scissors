@@ -2,10 +2,11 @@ function getComputerChoice() {
     const computerChoice = ["rock", "paper", "scissors"];
     const random = computerChoice[Math.floor(Math.random() * computerChoice.length)];
     return random;
-}   
+}
 
-function singleRound(playerSelection, computerSelection) {
-    getComputerChoice();
+function playRound() {
+    const playerSelection = "rock";
+    const computerSelection = getComputerChoice();
     if (playerSelection === computerSelection) {
         console.log(`It's a tie, you both picked ${playerSelection}!`);
     } else if (playerSelection === "rock" && computerSelection === "paper") {
@@ -23,8 +24,12 @@ function singleRound(playerSelection, computerSelection) {
     }
 }
 
-const playerSelection = "rock";
-const computerSelection = getComputerChoice();
-console.log(computerSelection);
+function game() {
+    playRound();
+    playRound();
+    playRound();
+    playRound();
+    playRound();
+}
 
-singleRound(playerSelection, computerSelection);
+console.log(game());
