@@ -40,12 +40,10 @@ function game() {
     playRound();
     playRound();
     if (playerScore > computerScore) {
-        console.log("You are the winner!");
+        console.log(`You scored ${playerScore} and the computer scored ${computerScore}. You are the winner!`);
     } else {
-        console.log("Uh oh, you lose!")
+        console.log(`Uh oh, you scored ${playerScore} and the computer scored ${computerScore}. You lose!`)
     }
 }
 
 game();
-console.log(playerScore);
-console.log(computerScore);
